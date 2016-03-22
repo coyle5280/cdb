@@ -1,16 +1,19 @@
 cache: false
 language: node_js
 node_js:
-  - "4.1"
+  - "0.12"
 
 install:
   - npm install
 
 before_script:
-  - cp secrets.example.json secrets.json
-  - npm install -g grunt-cli
+  - npm install -g grunt-cli bower
+  - npm install
+  - bower install
+  - bundle install
 
 script:
+  - grunt build
   - grunt test
 
 notifications:

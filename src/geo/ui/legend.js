@@ -117,18 +117,6 @@ cdb.geo.ui.Legend = cdb.core.View.extend({
 
   className: "cartodb-legend",
 
-  events: {
-    "dragstart":            "_stopPropagation",
-    "mousedown":            "_stopPropagation",
-    "touchstart":           "_stopPropagation",
-    "MSPointerDown":        "_stopPropagation",
-    "dblclick":             "_stopPropagation",
-    "mousewheel":           "_stopPropagation",
-    "DOMMouseScroll":       "_stopPropagation",
-    "dbclick":              "_stopPropagation",
-    "click":                "_stopPropagation"
-  },
-
   initialize: function() {
     _.bindAll(this, "render", "show", "hide");
 
@@ -140,10 +128,6 @@ cdb.geo.ui.Legend = cdb.core.View.extend({
     this._setupItems();
 
     this._updateLegendType();
-  },
-
-  _stopPropagation: function(ev) {
-    ev.stopPropagation();
   },
 
   _setupModel: function() {
@@ -835,26 +819,10 @@ cdb.geo.ui.Legend.Color = cdb.geo.ui.Legend.Category.extend({ });
  * */
 cdb.geo.ui.StackedLegend = cdb.core.View.extend({
 
-  events: {
-    "dragstart":            "_stopPropagation",
-    "mousedown":            "_stopPropagation",
-    "touchstart":           "_stopPropagation",
-    "MSPointerDown":        "_stopPropagation",
-    "dblclick":             "_stopPropagation",
-    "mousewheel":           "_stopPropagation",
-    "DOMMouseScroll":       "_stopPropagation",
-    "dbclick":              "_stopPropagation",
-    "click":                "_stopPropagation"
-  },
-
   className: "cartodb-legend-stack",
 
   initialize: function() {
     _.each(this.options.legends, this._setupBinding, this);
-  },
-
-  _stopPropagation: function(ev) {
-    ev.stopPropagation();
   },
 
   getLegendByIndex: function(index) {
