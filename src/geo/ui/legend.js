@@ -886,6 +886,14 @@ cdb.geo.ui.StackedLegend = cdb.core.View.extend({
 
   addTo: function(element) {
     $(element).html(this.render().$el);
+  },
+
+  count: function () {
+    return this.options.legends.length;
+  },
+
+  getModels: function () {
+    return this.options.legends;
   }
 });
 
