@@ -10,7 +10,7 @@ cdb.geo.ui.Header = cdb.core.View.extend({
       color: "#ffffff",
       fontSize: "20",
       fontFamilyName: "Helvetica",
-      boxColor: "#000000",
+      boxColor: 'rgba(0,0,0,0.5)',
       boxOpacity: 0.7,
       boxPadding: 10
     }
@@ -110,6 +110,7 @@ cdb.geo.ui.Header = cdb.core.View.extend({
     this.$el.css("z-index", this.style.get("zIndex"));
     this.$text.css('font-family', fontFamily);
     this.$content.css('text-align', textAlign);
+    $(".cartodb-header").css("background-color", "transparent");
     this.$content.css("background-color", this._getRGBA(boxColor, boxOpacity));
     this.$text.css("color", this._getRGBA(textColor, 1));
   },
