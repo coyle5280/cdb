@@ -127,7 +127,6 @@ cdb.geo.ui.Header = cdb.core.View.extend({
     data.title = cdb.core.sanitize.html(data.title);
     data.description = this._setLinksTarget(cdb.core.sanitize.html(data.description));
     this.$el.html(this.options.template(data));
-    this._applyStyle();
 
     if (this.options.slides) {
       this.slides_controller = new cdb.geo.ui.SlidesController({
@@ -144,8 +143,12 @@ cdb.geo.ui.Header = cdb.core.View.extend({
       this.hide();
     }
 
-    return this;
+    var self = this;
+    setTimeout(function() {
+      self._applyStyle();
+    }, 500);
 
+    return this;
   }
 
 });
