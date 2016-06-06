@@ -151,6 +151,7 @@ cdb.vis.Overlay.register('header', function(data, vis) {
     model: new cdb.core.Model(options),
     transitions: data.transitions,
     slides: vis.slides,
+    style: options.style,
     template: template
   });
 
