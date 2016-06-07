@@ -144,6 +144,8 @@ cdb.geo.ui.Header = cdb.core.View.extend({
     }
 
     var self = this;
+    // Delay applying styles to prevent rendering issues with other elements;
+    // annotations also do this.
     setTimeout(function() {
       self._applyStyle();
     }, 500);
