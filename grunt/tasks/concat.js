@@ -154,8 +154,7 @@ module.exports = {
             'vendor/mod/jquery-ui/jquery.ui.widget.js',
             'vendor/mod/jquery-ui/jquery.ui.mouse.js',
             'vendor/mod/jquery-ui/jquery.ui.draggable.js',
-            'vendor/mod/jquery-ui/jquery.ui.slider.js',
-            'vendor/mod/jquery-ui/jquery.ui.touch-punch.js'
+            'vendor/mod/jquery-ui/jquery.ui.slider.js'
           ]
         }
       },

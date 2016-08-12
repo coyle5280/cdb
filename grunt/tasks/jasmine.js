@@ -26,7 +26,6 @@ module.exports = {
           "vendor/mod/jquery-ui/jquery.ui.mouse.js",
           "vendor/mod/jquery-ui/jquery.ui.draggable.js",
           "vendor/mod/jquery-ui/jquery.ui.slider.js",
-          "vendor/mod/jquery-ui/jquery.ui.touch-punch.js",
           "vendor/html-css-sanitizer-bundle.js",
           "test/lib/sinon-1.3.4.js",
           "test/lib/sinon-ie.js",
